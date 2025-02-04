@@ -38,7 +38,7 @@ body {
 /* Menu styles */
 #header-menu-container {
     /* Determines the size of the small logo that appears when zooming down on the menu */
-    --small-logo-size: 44px;
+    --small-logo-size: 64px;
 
     background-color: white;
     box-shadow: black 0px 12px 20px -13px;
@@ -53,6 +53,11 @@ body {
     z-index: 10;
 
     font-size: larger;
+}
+
+.menu-header-menu-container {
+    display: flex;
+    align-items: center;
 }
 
 .header__small-logo, .menu-header-menu-container {
@@ -91,13 +96,23 @@ body {
     padding: 10px;
 }
 
+.menu-item > .sub-menu {
+    margin: 0px 2px;
+}
+
 .menu > .menu-item > a {
     background-color: var(--button-color);
-    margin: 1px;
+    margin: 2px 2px 0px 2px;
     color: black;
 
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 10px;
     text-decoration: none;
+
+    transition: 250ms border-radius;
+}
+
+.menu > .menu-item.menu-item-has-children:hover > a {
+    border-radius: 10px 10px 0px 0px;
 }
 
 .sub-menu {
@@ -107,7 +122,22 @@ body {
     list-style: none;
     padding: 0px;
 
+    background-color: var(--button-color-hover);
+    gap: 1px;
+
+    border: 1px solid var(--button-color-hover);
+    box-sizing: border-box;
+
     visibility: hidden;
+}
+
+.sub-menu > .menu-item {
+    position: relative;
+}
+
+.menu > .menu-item > .sub-menu .sub-menu {
+    transform: translateX(calc(100% + 2px));
+    top: -1px;
 }
 
 .menu-item:hover > .sub-menu {
@@ -122,7 +152,7 @@ body {
 }
 
 .current-menu-item > a,
-.menu-item > a:hover {
+.menu-item:hover > a {
     background-color: var(--button-color-hover) !important;
 }
 /* Menu styles end */
