@@ -25,6 +25,6 @@
             </div>
         </header>
         <div id = "header-menu-container">
-            <img src = "<?php echo get_template_directory_uri(); ?>/assets/images/square-logo.png" class = "header__small-logo">
-            <?php wp_nav_menu(array('header-menu' => 'header-menu'));?>
+            <img src = "<?php echo get_template_directory_uri(); ?>/assets/images/big-square-logo.png" class = "header__small-logo">
+            <?php wp_nav_menu(array('menu' => 'header-menu'));?>
         </div>

@@ -49,7 +49,7 @@ body {
     position: sticky;
     left: 0px;
     top: -1px; /* Must be -1px for the intersection observer to work */
-    padding-top: 15px;
+    padding-top: 5px;
     z-index: 10;
 
     font-size: larger;
@@ -80,7 +80,7 @@ body {
     height: var(--small-logo-size);
 }
 
-.menu {
+#menu-header-menu {
     display: flex;
     justify-content: center;
 
@@ -89,6 +89,10 @@ body {
     width: 100%;
 
     list-style: none;
+}
+
+#menu-header-menu a {
+    box-sizing: border-box;
 }
 
 .menu-item > a {
@@ -100,7 +104,7 @@ body {
     margin: 0px 2px;
 }
 
-.menu > .menu-item > a {
+#menu-header-menu > .menu-item > a {
     background-color: var(--button-color);
     margin: 2px 2px 0px 2px;
     color: black;
@@ -111,7 +115,7 @@ body {
     transition: 250ms border-radius;
 }
 
-.menu > .menu-item.menu-item-has-children:hover > a {
+#menu-header-menu > .menu-item.menu-item-has-children:hover > a {
     border-radius: 10px 10px 0px 0px;
 }
 
@@ -126,7 +130,6 @@ body {
     gap: 1px;
 
     border: 1px solid var(--button-color-hover);
-    box-sizing: border-box;
 
     visibility: hidden;
 }
@@ -135,9 +138,10 @@ body {
     position: relative;
 }
 
-.menu > .menu-item > .sub-menu .sub-menu {
-    transform: translateX(calc(100% + 2px));
+#menu-header-menu > .menu-item > .sub-menu .sub-menu {
+    left: calc(100% - 2px);
     top: -1px;
+    width: max-content;
 }
 
 .menu-item:hover > .sub-menu {
@@ -151,8 +155,9 @@ body {
     text-decoration: none;
 }
 
-.current-menu-item > a,
-.menu-item:hover > a {
+#menu-header-menu .current-menu-item > a,
+#menu-header-menu .current-menu-ancestor > a,
+#menu-header-menu .menu-item:hover > a {
     background-color: var(--button-color-hover) !important;
 }
 /* Menu styles end */
@@ -162,6 +167,7 @@ body {
     display: grid;
     grid-template-areas: 'left middle right';
     grid-template-columns: auto 60% auto;
+    gap: 5px;
 
     background-color: #dfdfdf;
 }
@@ -184,15 +190,11 @@ body {
 
 /*footer styles*/
 footer {
-    position: absolute;
-    left: 0px;
-    width: 100%;
-
     background: black;
     color: white;
 
     padding-top: 3%;
-    padding-bottom: 5%;
+    padding-bottom: 10%;
 
     text-align: center;
 
@@ -208,10 +210,6 @@ footer {
 
 .footer_menu li {
     display: inline-block;
-}
-
-.footer_menu li + li::before {
-    content: "| ";
 }
 
 .footer_menu li > a {
