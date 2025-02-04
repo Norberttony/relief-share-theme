@@ -1,0 +1,195 @@
+/*
+    Theme Name: Relief Share
+    Author: Norbert Krajewski
+    Description: A theme specifically created for the Relief Share website
+    Version: 1.0
+    License: GNU General Public License v3 or later
+    License URI: http://www.gnu.ord/licenses/gpl-3.0.html
+*/
+
+:root {
+    --button-color: #E4C956;
+    --button-color-hover: #b69100;
+}
+
+body {
+    background-color: white;
+    margin: 0px;
+}
+
+/* Header styles */
+.header {
+    height: 30vh;
+}
+
+.header__logo-container {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.header__logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+/* Header styles end */
+
+/* Menu styles */
+#header-menu-container {
+    /* Determines the size of the small logo that appears when zooming down on the menu */
+    --small-logo-size: 44px;
+
+    background-color: white;
+    box-shadow: black 0px 12px 20px -13px;
+
+    display: flex;
+    justify-content: center;
+
+    position: sticky;
+    left: 0px;
+    top: -1px; /* Must be -1px for the intersection observer to work */
+    padding-top: 15px;
+    z-index: 10;
+
+    font-size: larger;
+}
+
+.header__small-logo, .menu-header-menu-container {
+    transform: translateX(calc(-1 * var(--small-logo-size) / 2));
+}
+
+.header__small-logo {
+    transition: opacity 1s;
+}
+
+#header-menu-container .header__small-logo {
+    opacity: 0;
+}
+
+#header-menu-container.pinned .header__small-logo {
+    opacity: 1;
+}
+
+.header__small-logo {
+    height: var(--small-logo-size);
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+
+    margin: 0px;
+    padding-left: 0px;
+    width: 100%;
+
+    list-style: none;
+}
+
+.menu-item > a {
+    display: block;
+    padding: 10px;
+}
+
+.menu > .menu-item > a {
+    background-color: var(--button-color);
+    margin: 1px;
+    color: black;
+
+    border-radius: 10px 10px 0px 0px;
+    text-decoration: none;
+}
+
+.sub-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0px;
+
+    visibility: hidden;
+}
+
+.menu-item:hover > .sub-menu {
+    visibility: visible;
+}
+
+.sub-menu > .menu-item > a {
+    background-color: var(--button-color);
+    color: black;
+
+    text-decoration: none;
+}
+
+.current-menu-item > a,
+.menu-item > a:hover {
+    background-color: var(--button-color-hover) !important;
+}
+/* Menu styles end */
+
+/* Main content styles */
+.content {
+    display: grid;
+    grid-template-areas: 'left middle right';
+    grid-template-columns: auto 60% auto;
+
+    background-color: #dfdfdf;
+}
+
+.content__main {
+    grid-area: middle;
+    background-color: white;
+    padding: 0px 4%;
+}
+
+.content__main, .content__sidebar {
+    padding-top: 20px;
+}
+
+.content__sidebar, .primary-sidebar {
+    grid-area: right;
+    background-color: white;
+}
+/* Main content styles end */
+
+/*footer styles*/
+footer {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+
+    background: black;
+    color: white;
+
+    padding-top: 3%;
+    padding-bottom: 5%;
+
+    text-align: center;
+
+    font-size: 12pt;
+    font-weight: 400;
+    font-family: var(--primary-font-family);
+}
+
+#menu-footer-menu {
+    padding: 0px;
+    margin: 0px;
+}
+
+.footer_menu li {
+    display: inline-block;
+}
+
+.footer_menu li + li::before {
+    content: "| ";
+}
+
+.footer_menu li > a {
+    color: var(--button-color);
+    font-size: 16pt;
+}
+
+.footer_menu li > a:visited {
+    color: var(--button-color-hover);
+}
+/*footer styles end*/
