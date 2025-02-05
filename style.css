@@ -160,6 +160,82 @@ body {
 #menu-header-menu .menu-item:hover > a {
     background-color: var(--button-color-hover) !important;
 }
+
+@media (min-width: 730px){
+    .header-menu__mobile-button {
+        display: none;
+    }
+}
+
+@media (max-width: 730px){
+    .header-menu__mobile-button::before {
+        content: '☰';
+    }
+
+    #header-menu-container.mobileActive {
+        border-bottom: 5px solid var(--button-color-hover);
+    }
+
+    #header-menu-container.mobileActive .header-menu__mobile-button::before {
+        content: 'X';
+    }
+
+    .header-menu__mobile-button {
+        display: initial;
+        background-color: var(--button-color);
+
+        width: 100%;
+        padding: 5px;
+        font-size: xx-large;
+
+        text-align: center;
+    }
+
+    #header-menu-container .menu-header-menu-container {
+        position: absolute;
+        width: 100%;
+        transform: none;
+        top: 100%;
+    }
+
+    #menu-header-menu {
+        background-color: var(--button-color);
+        flex-direction: column;
+        justify-content: start;
+        max-height: 50vh;
+        overflow-y: scroll;
+    }
+
+    #header-menu-container .header__small-logo,
+    #header-menu-container .menu-header-menu-container {
+        display: none;
+    }
+
+    #header-menu-container.mobileActive .menu-header-menu-container {
+        display: initial;
+    }
+
+    #menu-header-menu#menu-header-menu .sub-menu {
+        position: static;
+        visibility: visible;
+        margin-left: 20px;
+        width: auto;
+        border: 0px;
+        background-color: transparent;
+    }
+
+    /* Issue: same styles as #menu-header-menu > .menu-item > a*/
+    #menu-header-menu a {
+        background-color: var(--button-color);
+        margin: 2px 2px 0px 2px;
+        color: black;
+    
+        border-radius: 10px;
+        text-decoration: none;
+    
+        transition: 250ms border-radius;
+    }
+}
 /* Menu styles end */
 
 /* Main content styles */
