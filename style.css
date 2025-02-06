@@ -166,6 +166,10 @@ body {
     .header-menu__mobile-button {
         display: none;
     }
+    
+    #menu-header-menu .shadow {
+        display: none;
+    }
 }
 
 @media (max-width: 730px){
@@ -177,6 +181,19 @@ body {
         content: 'X';
     }
 
+    #menu-header-menu .shadow {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+
+        background: linear-gradient(0deg, black 0%, transparent 30%);
+        z-index: 1;
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
     .header-menu__mobile-button {
         display: initial;
         background-color: var(--button-color);
@@ -186,6 +203,7 @@ body {
         font-size: xx-large;
 
         text-align: center;
+        cursor: pointer;
     }
 
     #header-menu-container.mobileActive .header-menu__mobile-button {

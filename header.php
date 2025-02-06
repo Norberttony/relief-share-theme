@@ -27,5 +27,5 @@
         <div id = "header-menu-container">
             <div class = "header-menu__mobile-button"></div>
             <img src = "<?php echo get_template_directory_uri(); ?>/assets/images/big-square-logo.png" class = "header__small-logo">
-            <?php wp_nav_menu(array('menu' => 'header-menu'));?>
+            <?php wp_nav_menu(array('menu' => 'header-menu', 'theme_location' => 'header-menu'));?>
         </div>
