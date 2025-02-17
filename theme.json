@@ -11,6 +11,11 @@
             "area": "footer",
             "name": "site-footer",
             "title": "Footer"
+        },
+        {
+            "area": "sidebar",
+            "name": "sidebar",
+            "title": "Sidebar"
         }
     ]
 }
