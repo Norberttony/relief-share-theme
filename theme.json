@@ -46,6 +46,11 @@
             "area": "sidebar",
             "name": "sidebar",
             "title": "Sidebar"
+        },
+        {
+            "area": "masthead",
+            "name": "masthead",
+            "title": "Masthead"
         }
     ]
 }
