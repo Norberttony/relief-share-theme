@@ -17,12 +17,17 @@ body {
     margin: 0px;
 }
 
-/* Header styles */
-.header {
-    display: flex;
-    max-height: 30vh;
+.masthead-figure {
+    padding: 0px 10px;
 }
 
+.masthead-figure img {
+    width: 100%;
+    max-height: 30vh;
+    object-fit: contain;
+}
+
+/* Header styles */
 .header__logo-container {
     width: 100%;
     text-align: center;

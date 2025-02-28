@@ -1,12 +1,16 @@
-<!-- wp:pattern { "slug": "relief-share/header" } /-->
+<!-- wp:pattern {"slug":"relief-share/header"} /-->
 
-<div class = "content">
-    <div class = "content__main">
-        <!-- wp:post-featured-image { "style": { "spacing": { "margin": { "bottom": "var:preset|spacing|60" } } } } /-->
-		<!-- wp:post-title { "level": 1 } /-->
-		<!-- wp:post-content { "align": "full", "layout": { "type": "constrained" } } /-->
+<!-- wp:group {"layout":{"type":"constrained"},"className":"content"} -->
+<div class = "wp-block-group content">
+    <!-- wp:group {"layout":{"type":"constrained"},"className":"content__main"} -->
+    <div class = "wp-block-group content__main">
+        <!-- wp:post-featured-image {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|60"}}}} /-->
+		<!-- wp:post-title {"level":1} /-->
+		<!-- wp:post-content {"align":"full","layout":{"type":"constrained"}} /-->
 	</div>
-    <!-- wp:pattern { "slug": "relief-share/sidebar"  } /-->
+    <!-- /wp:group -->
+    <!-- wp:pattern {"slug":"relief-share/sidebar"} /-->
 </div>
+<!-- /wp:group -->
 
 <!-- wp:template-part {"slug":"site-footer","tagName":"footer"} /-->
