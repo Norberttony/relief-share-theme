@@ -284,13 +284,14 @@ body {
     padding: 0px 4%;
 }
 
-.content__main, .content__sidebar {
+.content > * {
     padding-top: 20px;
 }
 
-.content__sidebar, .primary-sidebar {
+.content aside {
     grid-area: right;
     background-color: white;
+    width: 100%;
 }
 
 @media (max-width: 730px){
