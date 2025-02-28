@@ -282,6 +282,7 @@ body {
     grid-area: middle;
     background-color: white;
     padding: 0px 4%;
+    width: 100%;
 }
 
 .content > * {
