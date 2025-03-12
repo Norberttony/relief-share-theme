@@ -27,244 +27,41 @@ body {
     object-fit: contain;
 }
 
-/* Header styles */
-.header__logo-container {
-    width: 100%;
-    text-align: center;
-}
-
-.header__logo {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-/* Header styles end */
-
 /* Menu styles */
-#header-menu-container {
-    /* Determines the size of the small logo that appears when zooming down on the menu */
-    --small-logo-size: 64px;
-
-    background-color: white;
-    box-shadow: black 0px 12px 20px -13px;
-
-    display: flex;
-    justify-content: center;
-
-    position: sticky;
-    left: 0px;
-    top: -1px; /* Must be -1px for the intersection observer to work */
-    padding-top: 5px;
-    z-index: 10;
-
-    font-size: larger;
-}
-
-.menu-header-menu-container {
-    display: flex;
-    align-items: center;
-}
-
-.header__small-logo, .menu-header-menu-container {
-    transform: translateX(calc(-1 * var(--small-logo-size) / 2));
-}
-
-.header__small-logo {
-    transition: opacity 1s;
-}
-
-#header-menu-container .header__small-logo {
-    opacity: 0;
-}
-
-#header-menu-container.pinned .header__small-logo {
-    opacity: 1;
-}
-
-.header__small-logo {
-    height: var(--small-logo-size);
-}
-
-#menu-header-menu {
-    display: flex;
-    justify-content: center;
-    transition: 1s height;
-
-    margin: 0px;
-    padding-left: 0px;
-    width: 100%;
-
-    list-style: none;
-}
-
-#menu-header-menu a {
-    box-sizing: border-box;
-}
-
-.menu-item > a {
-    display: block;
-    padding: 10px;
-}
-
-.menu-item > .sub-menu {
-    margin: 0px 2px;
-}
-
-#menu-header-menu > .menu-item > a {
+.header-menu .wp-block-navigation-item > .wp-block-navigation-item__content {
     background-color: var(--button-color);
-    margin: 2px 2px 0px 2px;
-    color: black;
 
     border-radius: 10px;
     text-decoration: none;
 
     transition: 250ms border-radius;
+
+    padding: 5px;
+    cursor: pointer;
 }
 
-#menu-header-menu > .menu-item.menu-item-has-children:hover > a {
+.header-menu .wp-block-navigation-item > .wp-block-navigation-item__content:hover {
     border-radius: 10px 10px 0px 0px;
-}
-
-.sub-menu {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding: 0px;
-
     background-color: var(--button-color-hover);
-    gap: 1px;
-
-    border: 1px solid var(--button-color-hover);
-
-    visibility: hidden;
 }
 
-.sub-menu > .menu-item {
-    position: relative;
-}
-
-#menu-header-menu > .menu-item > .sub-menu .sub-menu {
-    left: calc(100% - 2px);
-    top: -1px;
-    width: max-content;
-}
-
-.menu-item:hover > .sub-menu {
-    visibility: visible;
-}
-
-.sub-menu > .menu-item > a {
+.header-menu .wp-block-navigation__submenu-container .wp-block-navigation-item__content {
     background-color: var(--button-color);
-    color: black;
-
-    text-decoration: none;
+    border: 1px solid var(--button-color-hover);
+    border-radius: 0px;
 }
 
-#menu-header-menu .current-menu-item > a,
-#menu-header-menu .current-menu-ancestor > a,
-#menu-header-menu .menu-item:hover > a {
-    background-color: var(--button-color-hover) !important;
+.header-menu .wp-block-navigation__submenu-container .wp-block-navigation-item__content:hover {
+    border-radius: 0px;
+    background-color: var(--button-color-hover);
 }
 
-@media (min-width: 730px){
-    .header-menu__mobile-button {
-        display: none;
-    }
-    
-    #menu-header-menu .shadow {
-        display: none;
-    }
-}
-
-@media (max-width: 730px){
-    .header-menu__mobile-button::before {
-        content: '☰';
-    }
-
-    #header-menu-container.mobileActive .header-menu__mobile-button::before {
-        content: 'X';
-    }
-
-    #menu-header-menu .shadow {
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        width: 100%;
-        height: 100%;
-
-        background: linear-gradient(0deg, black 0%, transparent 5%);
-        z-index: 1;
-        opacity: 0.5;
-        pointer-events: none;
-    }
-
-    .header-menu__mobile-button {
-        display: initial;
-        background-color: var(--button-color);
-
-        width: 100%;
-        padding: 5px;
-        font-size: xx-large;
-
-        text-align: center;
-        cursor: pointer;
-    }
-
-    #header-menu-container.mobileActive .header-menu__mobile-button {
-        border-bottom: 10px solid var(--button-color-hover);
-    }
-    
-    #header-menu-container #menu-header-menu {
-        height: 0px;
-    }
-
-    #header-menu-container.mobileActive #menu-header-menu {
-        height: 50vh;
-    }
-
-    #header-menu-container .menu-header-menu-container {
-        position: absolute;
-        width: 100%;
-        transform: none;
-        top: 100%;
-    }
-
-    #menu-header-menu {
-        background-color: var(--button-color);
-        flex-direction: column;
-        justify-content: start;
-        overflow-y: scroll;
-    }
-
-    #header-menu-container .header__small-logo {
-        display: none;
-    }
-
-    #header-menu-container.mobileActive .menu-header-menu-container {
-        display: initial;
-    }
-
-    #menu-header-menu#menu-header-menu .sub-menu {
-        position: static;
-        visibility: visible;
-        margin-left: 20px;
-        width: auto;
-        border: 0px;
-        background-color: transparent;
-    }
-
-    /* Issue: same styles as #menu-header-menu > .menu-item > a*/
-    #menu-header-menu a {
-        background-color: var(--button-color);
-        margin: 2px 2px 0px 2px;
-        color: black;
-
-        border-radius: 10px;
-        text-decoration: none;
-
-        transition: 250ms border-radius;
-    }
+/* remove styles from mobile menu */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content,
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content:hover {
+    background-color: transparent;
+    border-radius: 0px;
+    border: none;
 }
 /* Menu styles end */
 

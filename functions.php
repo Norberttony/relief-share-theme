@@ -52,15 +52,3 @@ function relief_share_enqueue_scripts(){
 }
 
 add_action('wp_enqueue_scripts', 'relief_share_enqueue_scripts');
-
-
-// special "shadow" element for the header menu to indicate that mobile users can scroll to view more options
-// Code courtesy of https://wpscholar.com/blog/append-items-to-wordpress-nav-menu/
-function relief_share_add_shadow_to_menu($items, $args){
-    if ($args->theme_location == 'header-menu'){
-        $items .= '<div class = "shadow"></div>';
-    }
-    return $items;
-}
-
-add_filter('wp_nav_menu_items', 'relief_share_add_shadow_to_menu', 10, 2);

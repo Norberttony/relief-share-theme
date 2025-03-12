@@ -5,8 +5,14 @@
  * Categories: header
  */
 ?>
-<div id = "header-menu-container">
-    <div class = "header-menu__mobile-button"></div>
-    <img src = "<?php echo get_parent_theme_file_uri('/assets/images/big-square-logo.png'); ?>" class = "header__small-logo">
-    <?php wp_nav_menu(array('menu' => 'header-menu', 'theme_location' => 'header-menu'));?>
+<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"}} -->
+<div class="wp-block-group">
+    <!-- wp:image {"id":127,"width":"70px","height":"auto","sizeSlug":"full","linkDestination":"none"} -->
+    <figure class="wp-block-image size-full is-resized">
+        <img src="http://relief-shareinternational.org/wp-content/uploads/2025/02/cropped-square-logo.png" alt="" class="wp-image-127" style="width:70px;height:auto"/>
+    </figure>
+    <!-- /wp:image -->
+
+    <!-- wp:navigation {"className":"header-menu"} /-->
 </div>
+<!-- /wp:group -->
