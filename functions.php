@@ -13,20 +13,19 @@ add_action('init', 'relief_share_add_menus');
 
 
 // sidebar
-function relief_share_add_sidebar(){
-    register_sidebar(
-        array(
-            'name'          => 'Sidebar',
-            'id'            => 'sidebar',
-            'before_widget' => '<div>',
-            'after_widget'  => '</div>',
-            'before_title'  => '<h2>',
-            'after_title'   => '</h2>'
-        )
-    );
-}
+add_filter('default_wp_template_part_areas', 'relief_share_template_part_areas');
 
-add_action('widgets_init', 'relief_share_add_sidebar');
+function relief_share_template_part_areas(array $areas) {
+	$areas[] = array(
+		'area'        => 'sidebar',
+		'area_tag'    => 'aside',
+		'label'       => __('Sidebar', 'relief-share'),
+		'description' => __('Sidebars appear alongside the content.', 'relief-share'),
+		'icon'        => 'sidebar'
+	);
+
+	return $areas;
+}
 
 
 // styles
@@ -44,11 +43,3 @@ function relief_share_setup(){
 }
 
 add_action('after_setup_theme', 'relief_share_setup');
-
-
-// scripts
-function relief_share_enqueue_scripts(){
-    wp_enqueue_script('menu', get_parent_theme_file_uri('/assets/js/menu.js'), array(), '1.0', array('strategy' => 'defer'));
-}
-
-add_action('wp_enqueue_scripts', 'relief_share_enqueue_scripts');

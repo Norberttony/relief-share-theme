@@ -40,9 +40,12 @@ body {
     cursor: pointer;
 }
 
-.header-menu .wp-block-navigation-item > .wp-block-navigation-item__content:hover {
-    border-radius: 10px 10px 0px 0px;
+.header-menu .wp-block-navigation-item:hover > .wp-block-navigation-item__content {
     background-color: var(--button-color-hover);
+}
+
+.header-menu .wp-block-navigation-submenu:hover > .wp-block-navigation-item__content {
+    border-radius: 10px 10px 0px 0px;
 }
 
 .header-menu .wp-block-navigation__submenu-container .wp-block-navigation-item__content {
@@ -52,8 +55,11 @@ body {
 }
 
 .header-menu .wp-block-navigation__submenu-container .wp-block-navigation-item__content:hover {
-    border-radius: 0px;
     background-color: var(--button-color-hover);
+}
+
+.header-menu .wp-block-navigation__submenu-container:hover .wp-block-navigation-item__content {
+    border-radius: 0px;
 }
 
 /* remove styles from mobile menu */
