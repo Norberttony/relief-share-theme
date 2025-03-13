@@ -52,5 +52,20 @@
             "name": "masthead",
             "title": "Masthead"
         }
-    ]
+    ],
+    "styles": {
+        "typography": {
+            "fontFamily": "Raleway, sans-serif"
+        },
+        "elements": {
+            "heading": {
+                "color": {
+                    "text": "#2c6eab"
+                },
+                "typography": {
+                    "fontFamily": "Lato, sans-serif"
+                }
+            }
+        }
+    }
 }

@@ -28,6 +28,10 @@ body {
 }
 
 /* Menu styles */
+.header-menu {
+    font-size: large;
+}
+
 .header-menu .wp-block-navigation-item > .wp-block-navigation-item__content {
     background-color: var(--button-color);
 
@@ -68,6 +72,14 @@ body {
     background-color: transparent;
     border-radius: 0px;
     border: none;
+}
+
+.footer-menu .wp-block-navigation-item:hover .wp-block-navigation-item__content {
+    color: darkgray;
+}
+
+.footer-menu .wp-block-navigation-item__content {
+    margin: 0px 10px;
 }
 /* Menu styles end */
 
