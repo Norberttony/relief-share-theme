@@ -120,3 +120,30 @@ body {
     }
 }
 /* Main content styles end */
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input,
+form textarea {
+    padding: 6px;
+    font-size: medium;
+    font-family: Raleway, sans-serif;
+    outline: none;
+}
+
+form input[type="submit"] {
+    font-size: large;
+    background-color: var(--button-color);
+    cursor: pointer;
+    border: 0px;
+    width: 100%;
+}
+
+form input[type="submit"]:hover {
+    background-color: var(--button-color-hover);
+}
