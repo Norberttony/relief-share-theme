@@ -77,10 +77,11 @@ body {
 
 /* remove styles from mobile menu */
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content,
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content:hover {
-    background-color: transparent;
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content:hover,
+.wp-block-navigation__responsive-container.is-menu-open:not(.has-background) .wp-block-navigation__submenu-container {
+    background-color: transparent !important;
     border-radius: 0px;
-    border: none;
+    border: none !important;
 }
 
 .footer-menu .wp-block-navigation-item:hover .wp-block-navigation-item__content {
