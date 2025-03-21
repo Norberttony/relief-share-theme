@@ -58,7 +58,6 @@ body {
 
 .header-menu .wp-block-navigation__submenu-container .wp-block-navigation-item__content {
     background-color: var(--button-color);
-    border: 1px solid var(--button-color-hover);
     border-radius: 0px;
 }
 
@@ -72,6 +71,8 @@ body {
 
 .header-menu.wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container {
     background-color: var(--button-color-hover) !important;
+    border: 1px solid var(--button-color-hover) !important;
+    gap: 1px;
 }
 
 /* remove styles from mobile menu */
