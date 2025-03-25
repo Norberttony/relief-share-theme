@@ -16,3 +16,17 @@ function relief_share_setup(){
 }
 
 add_action('after_setup_theme', 'relief_share_setup');
+
+function relief_share_template_part_areas(array $areas){
+    $areas[] = array(
+        'area'        => 'sidebar',
+        'area_tag'    => 'aside',
+        'label'       => __('Sidebar', 'relief-share'),
+        'description' => __('Sidebars appear alongside the content.', 'relief-share'),
+        'icon'        => 'sidebar'
+    );
+
+    return $areas;
+}
+
+add_filter('default_wp_template_part_areas', 'relief_share_template_part_areas');
