@@ -167,4 +167,8 @@ form input[type="submit"]:hover {
 .slick-prev {
     left: -10px;
 }
+
+.slick-dots li button[role="tab"]::before {
+    font-size: 10px;
+}
 /* Slide carousel overwrite styles end */
