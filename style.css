@@ -22,6 +22,7 @@ body {
 }
 
 .masthead-figure img {
+    margin-top: 10px;
     width: 100%;
     max-height: 30vh;
     object-fit: contain;
