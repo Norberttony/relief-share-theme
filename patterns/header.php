@@ -5,7 +5,7 @@
  * Categories: header
  */
 ?>
-<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"},"className":"menu-container"} -->
+<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"}} -->
 <div class="wp-block-group">
     <!-- wp:image {"id":127,"width":"70px","height":"auto","sizeSlug":"full","linkDestination":"none"} -->
     <figure class="wp-block-image size-full is-resized">
@@ -13,6 +13,10 @@
     </figure>
     <!-- /wp:image -->
 
-    <!-- wp:navigation {"className":"header-menu"} /-->
+    <!-- wp:group {"style":{"spacing":{"margin":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}}},"layout":{"type":"constrained"}} -->
+    <div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--40);margin-bottom:var(--wp--preset--spacing--40)">
+        <!-- wp:navigation {"ref":139,"className":"header-menu","layout":{"type":"flex","justifyContent":"center"}} /-->
+    </div>
+    <!-- /wp:group -->
 </div>
 <!-- /wp:group -->

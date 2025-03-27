@@ -139,6 +139,10 @@ form {
     align-items: center;
 }
 
+form p {
+    margin: 7px 0px;
+}
+
 form input,
 form textarea {
     padding: 6px;
@@ -173,3 +177,17 @@ form input[type="submit"]:hover {
     font-size: 10px;
 }
 /* Slide carousel overwrite styles end */
+
+/* Contact Form 7 overwrite styles */
+.wpcf7-spinner {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0px;
+}
+
+.wpcf7-response-output {
+    margin: 0px;
+    margin-bottom: 10px;
+}
+/* Contact Form 7 overwrite styles end */
