@@ -4,7 +4,7 @@
     "settings": {
         "appearanceTools": true,
         "spacing": {
-            "blockGap": null
+            "blockGap": true
         },
         "color": {
             "palette": [
