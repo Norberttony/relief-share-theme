@@ -82,6 +82,11 @@
                 "spacing": {
                     "blockGap": "0em"
                 }
+            },
+            "core/quote": {
+                "color": {
+                    "background": "#0693e3"
+                }
             }
         }
     }
