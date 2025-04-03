@@ -5,11 +5,11 @@
  * Categories: header
  */
 ?>
-<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"}} -->
-<div class="wp-block-group">
-    <!-- wp:image {"id":127,"width":"70px","height":"auto","sizeSlug":"full","linkDestination":"none"} -->
+<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|20","padding":{"top":"0","bottom":"var:preset|spacing|20"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"}} -->
+<div class="wp-block-group" style="padding-top:0;padding-bottom:var(--wp--preset--spacing--20)">
+    <!-- wp:image {"id":127,"width":"75px","height":"auto","sizeSlug":"full","linkDestination":"none"} -->
     <figure class="wp-block-image size-full is-resized">
-        <img src="http://relief-shareinternational.org/wp-content/uploads/2025/02/cropped-square-logo.png" alt="" class="wp-image-127" style="width:70px;height:auto"/>
+        <img src="http://relief-shareinternational.org/wp-content/uploads/2025/02/cropped-square-logo.png" alt="" class="wp-image-127" style="width:75px;height:auto"/>
     </figure>
     <!-- /wp:image -->
 
