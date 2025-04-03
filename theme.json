@@ -71,6 +71,18 @@
                     "fontFamily": "Lato, sans-serif"
                 }
             }
+        },
+        "blocks": {
+            "relief-share/masthead": {
+                "spacing": {
+                    "blockGap": "0em"
+                }
+            },
+            "relief-share/header": {
+                "spacing": {
+                    "blockGap": "0em"
+                }
+            }
         }
     }
 }

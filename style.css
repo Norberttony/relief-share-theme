@@ -180,7 +180,7 @@ form input[type="submit"]:hover {
 /* Slide carousel overwrite styles */
 .slick-next,
 .slick-prev {
-    z-index: 10;
+    z-index: 9;
 }
 
 .slick-next {
