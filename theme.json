@@ -70,6 +70,33 @@
                 "typography": {
                     "fontFamily": "Lato, sans-serif"
                 }
+            },
+            "button": {
+                ":hover": {
+                    "color": {
+                        "background": "var:button|color|hover"
+                    }
+                },
+                ":active": {
+                    "color": {
+                        "background": "var:button|color|active"
+                    }
+                },
+                "color": {
+                    "background": "var:button|color",
+                    "text": "black"
+                },
+                "border": {
+                    "radius": "10px"
+                },
+                "spacing": {
+                    "padding": {
+                        "left": "8px",
+                        "right": "8px",
+                        "top": "5px",
+                        "bottom": "5px"
+                    }
+                }
             }
         },
         "blocks": {

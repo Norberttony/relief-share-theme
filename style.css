@@ -8,8 +8,9 @@
 */
 
 :root {
-    --button-color: #E4C956;
-    --button-color-hover: #b69100;
+    --wp--button--color: #E4C956;
+    --wp--button--color--hover: #b69100;
+    --wp--button--color--active: #816700;
 }
 
 body {
@@ -17,12 +18,7 @@ body {
     margin: 0px;
 }
 
-.masthead-figure {
-    padding: 0px 10px;
-}
-
 .masthead-figure img {
-    margin-top: 10px;
     width: 100%;
     max-height: 30vh;
     object-fit: contain;
@@ -34,7 +30,7 @@ body {
 }
 
 .header-menu .wp-block-navigation-item > .wp-block-navigation-item__content {
-    background-color: var(--button-color);
+    background-color: var(--wp--button--color);
 
     border-radius: 10px;
     text-decoration: none;
@@ -47,7 +43,7 @@ body {
 
 .header-menu .wp-block-navigation-item:has(button[aria-expanded="true"]) > .wp-block-navigation-item__content,
 .header-menu .wp-block-navigation-item:hover > .wp-block-navigation-item__content {
-    background-color: var(--button-color-hover) !important;
+    background-color: var(--wp--button--color--hover) !important;
 }
 
 .header-menu > .wp-block-navigation-submenu:has(button[aria-expanded="true"]) > .wp-block-navigation-item__content {
@@ -55,7 +51,7 @@ body {
 }
 
 .header-menu .wp-block-navigation__submenu-container {
-    background-color: var(--button-color);
+    background-color: var(--wp--button--color);
 }
 
 .header-menu .wp-block-navigation__submenu-container .wp-block-navigation-item__content {
@@ -63,12 +59,12 @@ body {
 }
 
 .header-menu .wp-block-navigation__submenu-container .wp-block-navigation-item__content:hover {
-    background-color: var(--button-color-hover);
+    background-color: var(--wp--button--color--hover);
 }
 
 .header-menu.wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container {
-    background-color: var(--button-color-hover) !important;
-    border: 1px solid var(--button-color-hover) !important;
+    background-color: var(--wp--button--color--hover) !important;
+    border: 1px solid var(--wp--button--color--hover) !important;
     gap: 1px;
 }
 
@@ -167,14 +163,14 @@ form textarea {
 
 form input[type="submit"] {
     font-size: large;
-    background-color: var(--button-color);
+    background-color: var(--wp--button--color);
     cursor: pointer;
     border: 0px;
     width: 100%;
 }
 
 form input[type="submit"]:hover {
-    background-color: var(--button-color-hover);
+    background-color: var(--wp--button--color--hover);
 }
 /* Form styles end */
 
