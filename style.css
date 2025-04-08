@@ -83,9 +83,10 @@ body {
 }
 
 /* remove styles from mobile menu */
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content,
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content:hover,
-.wp-block-navigation__responsive-container.is-menu-open:not(.has-background) .wp-block-navigation__submenu-container {
+.header-menu .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content,
+.header-menu .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content:hover,
+.header-menu .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content:active,
+.header-menu .wp-block-navigation__responsive-container.is-menu-open:not(.has-background) .wp-block-navigation__submenu-container {
     background-color: transparent !important;
     border-radius: 0px;
     border: none !important;
